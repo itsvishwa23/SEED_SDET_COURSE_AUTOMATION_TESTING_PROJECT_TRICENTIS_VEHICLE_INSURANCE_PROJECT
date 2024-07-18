@@ -137,9 +137,9 @@ public class Truck {
 		Thread.sleep(10000);
 
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
-		// Saving the screenshot in desired location
+
 		File source = screenshot.getScreenshotAs(OutputType.FILE);
-		// Path to the location to save screenshot
+
 		FileUtils.copyFile(source, new File("./SeleniumScreenshots/Screen.png"));
 		System.out.println("Screenshot is captured");
 		driver.findElement(By.xpath("//button[@class='confirm']")).click();
